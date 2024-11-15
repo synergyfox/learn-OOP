@@ -4,6 +4,7 @@ using learn_OOP.Inheritance;
 using learn_OOP.Interfaces;
 using learn_OOP.Polymorphism;
 using System;
+using System.Reflection;
 
 namespace learn_OOP
 {
@@ -90,6 +91,22 @@ namespace learn_OOP
             Console.WriteLine(calculator.SquareRoot(4));
             Console.WriteLine(calculator.Power(2, 3));
             Console.ReadLine();
+        }
+
+        public static void Run_Interface_DI()
+        {
+
+            // Create cooking methods
+            ICookingMethod baking = new Baking();
+            ICookingMethod grilling = new Grilling();
+
+            
+            IMeal pizza = new Pizza(baking);  
+            IMeal salad = new Steak(grilling);  
+
+            // Prepare meals
+            pizza.PrepareMeal();
+            salad.PrepareMeal();
         }
 
     #endregion

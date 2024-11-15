@@ -46,6 +46,7 @@
     <Compile Include="Abstraction\Abstraction.cs" />
     <Compile Include="Encapsulation\Encapsulation.cs" />
     <Compile Include="Inheritance\Family.cs" />
+    <Compile Include="Interfaces\DependencyInjection.cs" />
     <Compile Include="Interfaces\Interfaces.cs" />
     <Compile Include="Polymorphism\PolyMorphism.cs" />
     <Compile Include="Program.cs" />
