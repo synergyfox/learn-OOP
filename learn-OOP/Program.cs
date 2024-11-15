@@ -1,6 +1,7 @@
 ﻿using learn_OOP.Abstraction;
 using learn_OOP.Encapsulation;
 using learn_OOP.Inheritance;
+using learn_OOP.Interfaces;
 using learn_OOP.Polymorphism;
 using System;
 
@@ -68,10 +69,33 @@ namespace learn_OOP
 
         }
         #endregion
+        #region Interfaces
 
+        public static void Run_Interface_Simple()
+        {
+            Rectangle rectangle = new Rectangle();
+            Line line = new Line();
+            line.Draw();
+            rectangle.Draw();
+            Console.ReadLine();
+        }
+
+        public static void Run_AdvancedCalculator()
+        {
+            AdvancedCalculator calculator = new AdvancedCalculator();
+            Console.WriteLine(calculator.Add(1, 2));
+            Console.WriteLine(calculator.Subtract(1, 2));
+            Console.WriteLine(calculator.Multiply(1, 2));
+            Console.WriteLine(calculator.Divide(1, 2));
+            Console.WriteLine(calculator.SquareRoot(4));
+            Console.WriteLine(calculator.Power(2, 3));
+            Console.ReadLine();
+        }
+
+    #endregion
         #region Polymorphism
-        //Method Overloading
-        public static void Run_Polymorphism_Overloading()
+    //Method Overloading
+    public static void Run_Polymorphism_Overloading()
         {
             Calculator calculator = new Calculator();
             Console.WriteLine(calculator.Add(1, 2));
@@ -102,7 +126,9 @@ namespace learn_OOP
             // Run_Abstraction();
             //Run_Encapsulation();
             //Run_Polymorphism_Overloading();
-            Run_Polymorphism_Overiding();
+            //Run_Polymorphism_Overiding();
+            //Run_Interface_Simple();
+            //Run_AdvancedCalculator();
         }
     }
 }
